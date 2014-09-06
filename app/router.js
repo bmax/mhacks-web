@@ -6,6 +6,9 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('login');
+  this.route('contact');
+  this.route('drivers');
+  this.route('driver', { path: 'driver/:driver_id'});
 });
 
 export default Router;
