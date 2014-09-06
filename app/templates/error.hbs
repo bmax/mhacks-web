@@ -1,0 +1,7 @@
+{{#unless session.isAuthenticated}}
+hello, you're not logged in silly bear.
+<br/><br/>
+{{#unless model.isAuthorized}}
+{{render 'login'}}
+{{/unless}}
+{{/unless}}

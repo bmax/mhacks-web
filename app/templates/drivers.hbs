@@ -1,0 +1,22 @@
+{{#if success}}
+<p class="bg-success"> Successfully added {{name}} </p>
+{{/if}}	
+{{#if error}}
+<p class="bg-danger"> Failed to add {{driver_name}}  - <b>{{error}}</b> </p>
+{{/if}}
+
+Add a driver: {{input id='driver_name' placeholder='Driver Name' value=driver_name}} <button {{action 'submitDriver'}}>Add Driver</button><br/>
+
+<h1>Drivers</h1>
+{{#each}}
+		<div class='col-md-4'>
+			<img src='http://etc-mysitemyway.s3.amazonaws.com/icons/legacy-previews/icons/3d-transparent-glass-icons-transport-travel/036458-3d-transparent-glass-icon-transport-travel-transportation-car3.png' width='100' height='100' alt='Car'/>
+			<div style='font-weight:bold'>{{name}}</div>
+				{{#link-to 'driver' this.id}}View detailed data{{/link-to}}<br/>
+				{{#if showToken}}
+					<span>{{token}}</span>
+				{{else}}
+					<a {{action 'viewToken' this}}>View token</a>
+				{{/if}}
+		</div>
+{{/each}}
