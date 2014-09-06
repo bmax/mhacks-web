@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MhacksWeb</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/mhacks-web.css">
+  </head>
+  <body>
+    <script>
+      window.MhacksWebENV = {{ENV}};
+      window.EmberENV = window.MhacksWebENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/mhacks-web.js"></script>
+    <script>
+      window.MhacksWeb = require('mhacks-web/app')['default'].create(MhacksWebENV.APP);
+    </script>
+  </body>
+</html>
