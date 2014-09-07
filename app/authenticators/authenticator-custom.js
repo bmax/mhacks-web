@@ -33,7 +33,7 @@ export default Base.extend({
                 // with will be available through the session
               Ember.$.ajaxSetup({
                     headers: {
-                      'authorization':  'Token ' + response.auth_token
+                      'authorization':  'Token ' + response.manager.auth_token
                     }
               });
               resolve(response.manager);
