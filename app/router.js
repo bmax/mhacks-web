@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('contact');
   this.route('drivers');
   this.route('driver', { path: 'driver/:driver_id'});
+  this.route('register');
 });
 
 export default Router;
