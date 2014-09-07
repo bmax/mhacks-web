@@ -1,0 +1,16 @@
+{{#unless session.isAuthenticated}}
+          {{#if message.error}}
+          <p class="bg-danger"> {{message.error}} </p>
+          {{/if}}
+<form {{action authenticate on='submit'}} style='text-align:left;'>
+ <label for="identification">Full name</label>
+    {{input id='full_name' placeholder='Enter Full Name' value=full_name}}<br/>
+  <label for="identification">Email</label>
+    {{input id='e_mail' placeholder='Enter Email' value=e_mail}}<br/>
+      <label for="password">Password</label>
+        {{input id='password' placeholder='Enter Password' type='password' value=password}}<br/>
+          <label for="passwordc">Password Confirmation</label>
+        {{input id='passwordc' placeholder='Enter Password Confirmation' type='password' value=passwordc}}
+          <button type="submit">Register</button>
+          </form>
+{{/unless}}
